@@ -9,7 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.ohl.godblocks.GodBlocks;
-import net.ohl.godblocks.block.custom.SoundBlock;
+import net.ohl.godblocks.block.custom.GodBlock;
 import net.ohl.godblocks.block.custom.StrawberryCropBlock;
 import net.ohl.godblocks.item.ModItems;
 import net.ohl.godblocks.sound.ModSounds;
@@ -40,7 +40,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, GodBlocks.MOD_ID);
 
     public static final RegistryObject<Block> GODBLOCK_T1 = registerBlock("godblock_t1",
-            () -> new SoundBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NOTE_BLOCK).sound(ModSounds.GODBLOCK_SOUNDS)));
+            () -> new GodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NOTE_BLOCK).sound(ModSounds.GODBLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));

@@ -11,8 +11,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 
-public class SoundBlock extends Block {
-    public SoundBlock(Properties pProperties) {
+public class GodBlock extends Block {
+    public GodBlock(Properties pProperties) {
         super(pProperties);
     }
 
