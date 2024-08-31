@@ -2,6 +2,7 @@ package net.ohl.godblocks.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.ohl.godblocks.GodBlocks;
@@ -19,7 +20,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider pProvider) {
-        this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
+        this.tag(ModTags.Blocks.METAL_DETECTOR_VALUABLES)
+                .addTag(Tags.Blocks.ORES);
 
         this.tag(ModTags.Blocks.NEEDS_AMETHYST_TOOL)
                 .add(ModBlocks.SOUND_BLOCK.get());
