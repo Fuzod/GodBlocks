@@ -1,0 +1,32 @@
+{
+  "creativetab.godblocks.amethyst_items": "Amethyst Items",
+  "creativetab.godblocks.himalayan_items": "Himalayan Items",
+  "creativetab.godblocks.tool_items": "Tools",
+  "creativetab.godblocks.food_items": "Foods",
+  "creativetab.godblocks.spawn_eggs": "Spawn Eggs",
+
+  "item.godblocks.rhino_spawn_egg": "Rhino Spawn Egg",
+
+  "item.godblocks.amethyst_staff": "Amethyst Staff",
+  "item.godblocks.amethyst_sword": "Amethyst Sword",
+  "item.godblocks.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.godblocks.amethyst_axe": "Amethyst Axe",
+  "item.godblocks.amethyst_shovel": "Amethyst Shovel",
+  "item.godblocks.amethyst_hoe": "Amethyst Hoe",
+
+  "item.godblocks.amethyst_helmet": "Amethyst Helmet",
+  "item.godblocks.amethyst_chestplate": "Amethyst Chestplate",
+  "item.godblocks.amethyst_leggins": "Amethyst Leggings",
+  "item.godblocks.amethyst_boots": "Amethyst Boots",
+
+  "item.godblocks.strawberry": "Strawberry",
+  "item.godblocks.strawberry_seeds": "Strawberry Seeds",
+  "item.godblocks.strawberry_cake": "Strawberry Cake",
+  "item.godblocks.coconut": "Coconut",
+  "item.godblocks.coconut_half": "Coconut Half",
+  "item.godblocks.coconut_milk": "Coconut Milk",
+
+  "item.godblocks.metal_detector": "Metal Detector",
+  "block.godblocks.sound_block": "Sound Block",
+  "sounds.godblocks.metal_detector_found_ore": "Metal Detector Bip"
+}
