@@ -21,7 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.SOUND_BLOCK);
+        blockWithItem(ModBlocks.GODBLOCK_T1);
 
         makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
     }

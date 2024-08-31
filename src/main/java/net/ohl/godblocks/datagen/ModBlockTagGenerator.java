@@ -24,7 +24,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(Tags.Blocks.ORES);
 
         this.tag(ModTags.Blocks.NEEDS_AMETHYST_TOOL)
-                .add(ModBlocks.SOUND_BLOCK.get());
+                .add(ModBlocks.GODBLOCK_T1.get());
 
 
 //        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)

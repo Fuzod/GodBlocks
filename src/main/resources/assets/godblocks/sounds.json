@@ -5,34 +5,34 @@
       "godblocks:metal_detector_found_ore"
     ]
   },
-  "sound_block_break": {
-    "subtitle": "sounds.godblocks.sound_block_break",
+  "godblock_break": {
+    "subtitle": "sounds.godblocks.godblock_break",
     "sounds": [
-      "godblocks:sound_block_break"
+      "godblocks:godblock_break"
     ]
   },
-  "sound_block_step": {
-    "subtitle": "sounds.godblocks.sound_block_step",
+  "godblock_step": {
+    "subtitle": "sounds.godblocks.godblock_step",
     "sounds": [
-      "godblocks:sound_block_step"
+      "godblocks:godblock_step"
     ]
   },
-  "sound_block_place": {
-    "subtitle": "sounds.godblocks.sound_block_place",
+  "godblock_place": {
+    "subtitle": "sounds.godblocks.godblock_place",
     "sounds": [
-      "godblocks:sound_block_place"
+      "godblocks:godblock_place"
     ]
   },
-  "sound_block_hit": {
-    "subtitle": "sounds.godblocks.sound_block_hit",
+  "godblock_hit": {
+    "subtitle": "sounds.godblocks.godblock_hit",
     "sounds": [
-      "godblocks:sound_block_hit"
+      "godblocks:godblock_hit"
     ]
   },
-  "sound_block_fall": {
-    "subtitle": "sounds.godblocks.sound_block_fall",
+  "godblock_fall": {
+    "subtitle": "sounds.godblocks.godblock_fall",
     "sounds": [
-      "godblocks:sound_block_fall"
+      "godblocks:godblock_fall"
     ]
   }
 }

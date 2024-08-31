@@ -14,18 +14,18 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> METAL_DETECTOR_FOUND_ORE = registerSoundEvents("metal_detector_found_ore");
 
-    public static final RegistryObject<SoundEvent> SOUND_BLOCK_BREAK = registerSoundEvents("sound_block_break");
-    public static final RegistryObject<SoundEvent> SOUND_BLOCK_STEP = registerSoundEvents("sound_block_step");
-    public static final RegistryObject<SoundEvent> SOUND_BLOCK_FALL = registerSoundEvents("sound_block_fall");
-    public static final RegistryObject<SoundEvent> SOUND_BLOCK_PLACE = registerSoundEvents("sound_block_place");
-    public static final RegistryObject<SoundEvent> SOUND_BLOCK_HIT = registerSoundEvents("sound_block_hit");
+    public static final RegistryObject<SoundEvent> GODBLOCK_BREAK = registerSoundEvents("godblock_break");
+    public static final RegistryObject<SoundEvent> GODBLOCK_STEP = registerSoundEvents("godblock_step");
+    public static final RegistryObject<SoundEvent> GODBLOCK_FALL = registerSoundEvents("godblock_fall");
+    public static final RegistryObject<SoundEvent> GODBLOCK_PLACE = registerSoundEvents("godblock_place");
+    public static final RegistryObject<SoundEvent> GODBLOCK_HIT = registerSoundEvents("godblock_hit");
 
-    public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
-            ModSounds.SOUND_BLOCK_BREAK,
-            ModSounds.SOUND_BLOCK_STEP,
-            ModSounds.SOUND_BLOCK_PLACE,
-            ModSounds.SOUND_BLOCK_HIT,
-            ModSounds.SOUND_BLOCK_FALL);
+    public static final ForgeSoundType GODBLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
+            ModSounds.GODBLOCK_BREAK,
+            ModSounds.GODBLOCK_STEP,
+            ModSounds.GODBLOCK_PLACE,
+            ModSounds.GODBLOCK_HIT,
+            ModSounds.GODBLOCK_FALL);
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String soundName) {
         return SOUND_EVENT.register(soundName,
