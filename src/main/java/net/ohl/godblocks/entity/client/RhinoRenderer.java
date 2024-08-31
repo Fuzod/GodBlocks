@@ -20,7 +20,7 @@ public class RhinoRenderer extends MobRenderer<RhinoEntity, RhinoModel<RhinoEnti
     }
 
     @Override
-    public void render(RhinoEntity pEntity, float pEntityYaw, float pPartialTicks, PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight) {
+    public void render(RhinoEntity pEntity, float pEntityYaw, float pPartialTicks, @NotNull PoseStack pPoseStack, @NotNull MultiBufferSource pBuffer, int pPackedLight) {
 
         if (pEntity.isBaby()) {
             pPoseStack.scale(0.5f, 0.5f, 0.5f);

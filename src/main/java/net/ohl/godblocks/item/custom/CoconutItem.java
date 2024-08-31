@@ -17,6 +17,7 @@ import net.minecraft.world.item.ProjectileItem;
 
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
@@ -26,7 +27,7 @@ public class CoconutItem extends Item implements ProjectileItem {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {
+    public @NotNull InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, @NotNull InteractionHand pHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
         pLevel.playSound(
                 null,
@@ -51,7 +52,7 @@ public class CoconutItem extends Item implements ProjectileItem {
     }
 
     @Override
-    public Projectile asProjectile(Level pLevel, Position pPos, ItemStack pStack, Direction pDirection) {
+    public @NotNull Projectile asProjectile(@NotNull Level pLevel, Position pPos, @NotNull ItemStack pStack, @NotNull Direction pDirection) {
         Snowball snowball = new Snowball(pLevel, pPos.x(), pPos.y(), pPos.z());
         snowball.setItem(pStack);
         return snowball;

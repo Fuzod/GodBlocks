@@ -8,7 +8,6 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 import net.ohl.godblocks.GodBlocks;
-import net.ohl.godblocks.item.ModItems;
 import net.ohl.godblocks.loot.AddItemModifier;
 import org.jetbrains.annotations.NotNull;
 

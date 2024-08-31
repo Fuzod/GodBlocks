@@ -27,6 +27,7 @@ public class MetalDetectorItem extends Item {
         if (! pContext.getLevel().isClientSide()) {
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
+            assert player != null;
 
             boolean foundBlock = false;
 
@@ -41,7 +42,6 @@ public class MetalDetectorItem extends Item {
                 }
             }
             if (! foundBlock) {
-                assert player != null;
                 player.sendSystemMessage(Component.literal("Nothing found"));
             }
         }

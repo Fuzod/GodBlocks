@@ -3,13 +3,11 @@ package net.ohl.godblocks.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.ohl.godblocks.GodBlocks;
-import net.ohl.godblocks.block.ModBlocks;
 import net.ohl.godblocks.item.ModItems;
 import org.jetbrains.annotations.NotNull;
 
