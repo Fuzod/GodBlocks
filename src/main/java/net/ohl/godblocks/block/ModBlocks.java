@@ -40,7 +40,9 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, GodBlocks.MOD_ID);
 
     public static final RegistryObject<Block> GODBLOCK_T1 = registerBlock("godblock_t1",
-            () -> new GodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NOTE_BLOCK).sound(ModSounds.GODBLOCK_SOUNDS)));
+            () -> new GodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NOTE_BLOCK)
+                    .lightLevel(lightEmission -> 10)
+                    .sound(ModSounds.GODBLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));
