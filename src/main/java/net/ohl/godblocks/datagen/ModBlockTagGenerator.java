@@ -25,6 +25,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(ModTags.Blocks.NEEDS_AMETHYST_TOOL)
                 .add(ModBlocks.GODBLOCK_T1.get());
+        this.tag(ModTags.Blocks.NEEDS_AMETHYST_TOOL)
+                .add(ModBlocks.GODBLOCK_T2.get());
+        this.tag(ModTags.Blocks.NEEDS_AMETHYST_TOOL)
+                .add(ModBlocks.GODBLOCK_T3.get());
 
 
 //        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)

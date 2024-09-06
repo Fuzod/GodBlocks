@@ -53,6 +53,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.AMETHYST_STAFF.get());
                         output.accept(ModItems.METAL_DETECTOR.get());
                         output.accept(ModBlocks.GODBLOCK_T1.get());
+                        output.accept(ModBlocks.GODBLOCK_T2.get());
+                        output.accept(ModBlocks.GODBLOCK_T3.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> SPAWN_EGGS_TAB = CREATIVE_MODE_TABS.register("spawn_eggs_tab",

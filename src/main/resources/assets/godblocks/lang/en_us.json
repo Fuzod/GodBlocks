@@ -27,6 +27,9 @@
   "item.godblocks.coconut_milk": "Coconut Milk",
 
   "item.godblocks.metal_detector": "Metal Detector",
+  "sounds.godblocks.metal_detector_found_ore": "Metal Detector Bip",
+
   "block.godblocks.godblock_t1": "God Block T1",
-  "sounds.godblocks.metal_detector_found_ore": "Metal Detector Bip"
+  "block.godblocks.godblock_t2": "God Block T2",
+  "block.godblocks.godblock_t3": "God Block T3"
 }

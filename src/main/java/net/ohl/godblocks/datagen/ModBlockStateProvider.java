@@ -22,7 +22,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.GODBLOCK_T1);
-
+        blockWithItem(ModBlocks.GODBLOCK_T2);
+        blockWithItem(ModBlocks.GODBLOCK_T3);
         makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
     }
 
@@ -36,7 +37,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         var cropAgeProperty = ((StrawberryCropBlock) block).getAgeProperty();
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(cropAgeProperty),
-                ResourceLocation.fromNamespaceAndPath(GodBlocks.MOD_ID, "block/"+textureName+state.getValue(cropAgeProperty))).renderType("cutout"));
+                ResourceLocation.fromNamespaceAndPath(GodBlocks.MOD_ID, "block/"+ textureName + state.getValue(cropAgeProperty))).renderType("cutout"));
         return models;
     }
 

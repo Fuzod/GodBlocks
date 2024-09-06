@@ -67,6 +67,8 @@ public class GodBlocks
         }
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS){
             event.accept(ModBlocks.GODBLOCK_T1);
+            event.accept(ModBlocks.GODBLOCK_T2);
+            event.accept(ModBlocks.GODBLOCK_T3);
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.METAL_DETECTOR);

@@ -9,8 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.ohl.godblocks.GodBlocks;
-import net.ohl.godblocks.block.custom.GodBlock;
-import net.ohl.godblocks.block.custom.StrawberryCropBlock;
+import net.ohl.godblocks.block.custom.*;
 import net.ohl.godblocks.item.ModItems;
 import net.ohl.godblocks.sound.ModSounds;
 
@@ -39,10 +38,9 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, GodBlocks.MOD_ID);
 
-    public static final RegistryObject<Block> GODBLOCK_T1 = registerBlock("godblock_t1",
-            () -> new GodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NOTE_BLOCK)
-                    .lightLevel(lightEmission -> 10)
-                    .sound(ModSounds.GODBLOCK_SOUNDS)));
+    public static final RegistryObject<Block> GODBLOCK_T1 = registerBlock(GodBlockT1.name, GodBlockT1::new);
+    public static final RegistryObject<Block> GODBLOCK_T2 = registerBlock(GodBlockT2.name, GodBlockT2::new);
+    public static final RegistryObject<Block> GODBLOCK_T3 = registerBlock(GodBlockT3.name, GodBlockT3::new);
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));
