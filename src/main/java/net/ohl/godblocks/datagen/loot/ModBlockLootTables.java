@@ -14,18 +14,15 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.ohl.godblocks.block.ModBlocks;
-import net.ohl.godblocks.block.custom.GodBlockT1;
-import net.ohl.godblocks.block.custom.GodBlockT2;
-import net.ohl.godblocks.block.custom.GodBlockT3;
 import net.ohl.godblocks.block.custom.StrawberryCropBlock;
 import net.ohl.godblocks.item.ModItems;
 import org.jetbrains.annotations.NotNull;
@@ -39,25 +36,29 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+
         this.add(ModBlocks.GODBLOCK_T1.get(), LootTable.lootTable()
                 .withPool(
                         LootPool.lootPool()
-                                .setRolls(ConstantValue.exactly(1.0F))
                                 .add(LootItem.lootTableItem(Items.STICK).apply(SetItemCountFunction.setCount(UniformGenerator.between(5.0F, 15.0F))))
                                 .add(LootItem.lootTableItem(Items.APPLE).apply(SetItemCountFunction.setCount(UniformGenerator.between(0F, 1.0F))))
-                                .add(LootItem.lootTableItem(Items.COAL).apply(SetItemCountFunction.setCount(UniformGenerator.between(0F, 1.0F))))
+                                .add(LootItem.lootTableItem(Items.COAL).apply(SetItemCountFunction.setCount(UniformGenerator.between(0F, 1.0F)))).when(
+                                        BonusLevelTableCondition.bonusLevelFlatChance(
+                                                registrylookup.getOrThrow(Enchantments.FORTUNE), 1F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F
+                                        )
+                                )
                 ));
 
         this.add(ModBlocks.GODBLOCK_T2.get(), LootTable.lootTable()
                 .withPool(
                         LootPool.lootPool()
-                                .setRolls(ConstantValue.exactly(1.0F))
                                 .add(LootItem.lootTableItem(Blocks.IRON_BLOCK).apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0F, 2.0F))))
+                                .add(LootItem.lootTableItem(Items.BLAZE_ROD).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 5.0F))))
                 )
                 .withPool(
                         LootPool.lootPool()
-                                .setRolls(ConstantValue.exactly(1.0F))
-                                .add(LootItem.lootTableItem(Items.BLAZE_ROD).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 5.0F))))
+                                .add(LootItem.lootTableItem(Items.DIAMOND_PICKAXE).apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0F, 1.0F))))
                 ));
 
         this.add(ModBlocks.GODBLOCK_T3.get(), LootTable.lootTable()

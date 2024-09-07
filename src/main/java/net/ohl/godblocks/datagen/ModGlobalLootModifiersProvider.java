@@ -5,6 +5,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 import net.ohl.godblocks.GodBlocks;
@@ -27,5 +28,10 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         add("amethyst_shard_from_armorer", new AddItemModifier(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/village/village_armorer")).build()
         }, Items.AMETHYST_SHARD));
+
+        add("redstone_from_godblock_t1", new AddItemModifier(new LootItemCondition[]{
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath(GodBlocks.MOD_ID, "blocks/godblock_t1")).build(),
+                LootItemRandomChanceCondition.randomChance(0.5f).build()
+        }, Items.REDSTONE));
     }
 }
