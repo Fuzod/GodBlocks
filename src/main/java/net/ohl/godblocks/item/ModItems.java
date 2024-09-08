@@ -43,6 +43,8 @@ public class ModItems {
             () -> new AxeItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.AMETHYST, 5.5F, - 2.5F))));
     public static final RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe",
             () -> new HoeItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.AMETHYST, - 2.5F, 0.0F))));
+    public static final RegistryObject<Item> AMETHYST_PAXEL = ITEMS.register("amethyst_paxel",
+            () -> new PaxelItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.AMETHYST, 2.0F, - 2.0F))));
 
     public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet",
             () -> new ModArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
@@ -59,6 +61,9 @@ public class ModItems {
     public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc5d1c5,
                     new Item.Properties()));
+    // TODO: Item and Recipe
+    public static final RegistryObject<Item> MAGICAL_SWORD = ITEMS.register("magical_sword",
+            () -> new SwordItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.AMETHYST, 4, - 2.0F))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

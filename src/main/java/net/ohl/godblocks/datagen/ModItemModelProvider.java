@@ -23,6 +23,7 @@ import java.util.Objects;
 
 public class ModItemModelProvider extends ItemModelProvider {
     private static final LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+
     static {
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
         trimMaterials.put(TrimMaterials.IRON, 0.2F);
@@ -56,6 +57,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.AMETHYST_AXE);
         handheldItem(ModItems.AMETHYST_SHOVEL);
         handheldItem(ModItems.AMETHYST_HOE);
+        handheldItem(ModItems.AMETHYST_PAXEL);
 
         trimmedArmorItem(ModItems.AMETHYST_HELMET);
         trimmedArmorItem(ModItems.AMETHYST_CHESTPLATE);
@@ -149,7 +151,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
         final String MOD_ID = GodBlocks.MOD_ID;
 
-        if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
+        if (itemRegistryObject.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
 
                 float trimValue = value;

@@ -44,15 +44,153 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 //                                ModBlocks.HIMALAYAN_SALT_FULL_BLOCK.get(),
 //                                ModBlocks.HIMALAYAN_SALT_BLOCK.get())));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COCONUT_HALF.get(), 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.STRAWBERRY_CAKE.get(), 3)
+                .requires(ModItems.STRAWBERRY.get())
+                .requires(Items.MILK_BUCKET)
+                .requires(Items.WHEAT)
+                .unlockedBy(getHasName(ModItems.COCONUT.get()), has(ModItems.COCONUT.get()))
+                .save(pRecipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.COCONUT_HALF.get(), 2)
                 .requires(ModItems.COCONUT.get())
                 .unlockedBy(getHasName(ModItems.COCONUT.get()), has(ModItems.COCONUT.get()))
                 .save(pRecipeOutput);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COCONUT_MILK.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.COCONUT_MILK.get())
                 .requires(ModItems.COCONUT_HALF.get())
                 .requires(Items.STICK)
                 .unlockedBy(getHasName(ModItems.COCONUT_HALF.get()), has(ModItems.COCONUT_HALF.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.COMBAT,
+                        ModItems.AMETHYST_HELMET.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("   ")
+                .define('#', Items.AMETHYST_SHARD)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.COMBAT,
+                        ModItems.AMETHYST_CHESTPLATE.get())
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .define('#', Items.AMETHYST_SHARD)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.COMBAT,
+                        ModItems.AMETHYST_LEGGINGS.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', Items.AMETHYST_SHARD)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.COMBAT,
+                        ModItems.AMETHYST_BOOTS.get())
+                .pattern("   ")
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', Items.AMETHYST_SHARD)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.COMBAT,
+                        ModItems.AMETHYST_SWORD.get())
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" S ")
+                .define('#', Items.AMETHYST_SHARD)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.TOOLS,
+                        ModItems.AMETHYST_STAFF.get())
+                .pattern(" # ")
+                .pattern("#S#")
+                .pattern(" S ")
+                .define('#', Items.AMETHYST_SHARD)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.TOOLS,
+                        ModItems.AMETHYST_PICKAXE.get())
+                .pattern("###")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', Items.AMETHYST_SHARD)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.TOOLS,
+                        ModItems.AMETHYST_SHOVEL.get())
+                .pattern(" # ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', Items.AMETHYST_SHARD)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.TOOLS,
+                        ModItems.AMETHYST_AXE.get())
+                .pattern("## ")
+                .pattern("#S ")
+                .pattern(" S ")
+                .define('#', Items.AMETHYST_SHARD)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.TOOLS,
+                        ModItems.AMETHYST_HOE.get())
+                .pattern("## ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', Items.AMETHYST_SHARD)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.TOOLS,
+                        ModItems.AMETHYST_PAXEL.get())
+                .pattern("#D#")
+                .pattern("#S ")
+                .pattern(" S ")
+                .define('#', Items.AMETHYST_SHARD)
+                .define('S', Items.STICK)
+                .define('D', Items.DIAMOND)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
+
+//        ShapedRecipeBuilder.shaped(
+//                        RecipeCategory.TOOLS,
+//                        ModItems.AMETHYST_HAMMER.get())
+//                .pattern("#D#")
+//                .pattern("#S#")
+//                .pattern(" S ")
+//                .define('#', Items.AMETHYST_SHARD)
+//                .define('S', Items.STICK)
+//                .define('D', Items.DIAMOND)
+//                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+//                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.TOOLS,
+                        ModItems.METAL_DETECTOR.get())
+                .pattern("  i")
+                .pattern("SRS")
+                .pattern("iii")
+                .define('i', Items.IRON_INGOT)
+                .define('S', Items.STICK)
+                .define('R', Items.REDSTONE)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
                 .save(pRecipeOutput);
     }
 

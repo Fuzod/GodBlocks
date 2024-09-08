@@ -31,5 +31,8 @@
 
   "block.godblocks.godblock_t1": "God Block T1",
   "block.godblocks.godblock_t2": "God Block T2",
-  "block.godblocks.godblock_t3": "God Block T3"
+  "block.godblocks.godblock_t3": "God Block T3",
+
+  "item.godblocks.magical_sword": "Magical Sword",
+  "item.godblocks.amethyst_paxel": "Amethyst Paxel"
 }

@@ -2,6 +2,7 @@ package net.ohl.godblocks.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -29,6 +30,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.GODBLOCK_T2.get());
         this.tag(ModTags.Blocks.NEEDS_AMETHYST_TOOL)
                 .add(ModBlocks.GODBLOCK_T3.get());
+
+        this.tag(ModTags.Blocks.PAXEL_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .addTag(BlockTags.MINEABLE_WITH_AXE);
 
 
 //        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
