@@ -45,6 +45,8 @@ public class ModItems {
             () -> new HoeItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.AMETHYST, - 2.5F, 0.0F))));
     public static final RegistryObject<Item> AMETHYST_PAXEL = ITEMS.register("amethyst_paxel",
             () -> new PaxelItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.AMETHYST, 2.0F, - 2.0F))));
+    public static final RegistryObject<Item> AMETHYST_HAMMER = ITEMS.register("amethyst_hammer",
+            () -> new HammerItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.AMETHYST, 7.0F, - 3.5F))));
 
     public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet",
             () -> new ModArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));

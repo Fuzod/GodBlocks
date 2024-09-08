@@ -20,12 +20,15 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.godblocks.amethyst_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.METAL_DETECTOR.get());
+
                         output.accept(ModItems.AMETHYST_PICKAXE.get());
                         output.accept(ModItems.AMETHYST_AXE.get());
                         output.accept(ModItems.AMETHYST_SHOVEL.get());
                         output.accept(ModItems.AMETHYST_HOE.get());
                         output.accept(ModItems.AMETHYST_PAXEL.get());
+                        output.accept(ModItems.AMETHYST_HAMMER.get());
                         output.accept(ModItems.AMETHYST_STAFF.get());
+
                         output.accept(ModItems.AMETHYST_SWORD.get());
                         output.accept(ModItems.AMETHYST_HELMET.get());
                         output.accept(ModItems.AMETHYST_CHESTPLATE.get());

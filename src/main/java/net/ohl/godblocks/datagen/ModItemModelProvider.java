@@ -58,6 +58,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.AMETHYST_SHOVEL);
         handheldItem(ModItems.AMETHYST_HOE);
         handheldItem(ModItems.AMETHYST_PAXEL);
+        handheldItem(ModItems.AMETHYST_HAMMER);
 
         trimmedArmorItem(ModItems.AMETHYST_HELMET);
         trimmedArmorItem(ModItems.AMETHYST_CHESTPLATE);

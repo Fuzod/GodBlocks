@@ -169,17 +169,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
                 .save(pRecipeOutput);
 
-//        ShapedRecipeBuilder.shaped(
-//                        RecipeCategory.TOOLS,
-//                        ModItems.AMETHYST_HAMMER.get())
-//                .pattern("#D#")
-//                .pattern("#S#")
-//                .pattern(" S ")
-//                .define('#', Items.AMETHYST_SHARD)
-//                .define('S', Items.STICK)
-//                .define('D', Items.DIAMOND)
-//                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
-//                .save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.TOOLS,
+                        ModItems.AMETHYST_HAMMER.get())
+                .pattern("#D#")
+                .pattern("#S#")
+                .pattern(" S ")
+                .define('#', Items.AMETHYST_SHARD)
+                .define('S', Items.STICK)
+                .define('D', Items.DIAMOND)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(
                         RecipeCategory.TOOLS,
