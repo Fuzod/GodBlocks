@@ -15,7 +15,9 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -61,10 +63,10 @@ public class RhinoEntity extends Animal {
             attackAnimationTimeout = 80; // Length in ticks of the animation
             attackAnimationState.start(this.tickCount);
         } else {
-            --this.attackAnimationTimeout;
+            -- this.attackAnimationTimeout;
         }
 
-        if (!this.isAttacking()) {
+        if (! this.isAttacking()) {
             attackAnimationState.stop();
         }
     }
@@ -111,14 +113,15 @@ public class RhinoEntity extends Animal {
         this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
+        this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, Creeper.class, false));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 20D)
+                .add(Attributes.MAX_HEALTH, 30D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
-                .add(Attributes.MOVEMENT_SPEED, 0.5D)
-                .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
+                .add(Attributes.MOVEMENT_SPEED, 0.25D)
+                .add(Attributes.ARMOR_TOUGHNESS, 0.3f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5f)
                 .add(Attributes.ATTACK_DAMAGE, 2f);
     }

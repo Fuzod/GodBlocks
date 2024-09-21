@@ -48,7 +48,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.STRAWBERRY.get())
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.WHEAT)
-                .unlockedBy(getHasName(ModItems.COCONUT.get()), has(ModItems.COCONUT.get()))
+                .unlockedBy(getHasName(ModItems.STRAWBERRY.get()), has(ModItems.STRAWBERRY.get()))
                 .save(pRecipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.COCONUT_HALF.get(), 2)
                 .requires(ModItems.COCONUT.get())
@@ -190,7 +190,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('i', Items.IRON_INGOT)
                 .define('S', Items.STICK)
                 .define('R', Items.REDSTONE)
-                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(pRecipeOutput);
     }
 

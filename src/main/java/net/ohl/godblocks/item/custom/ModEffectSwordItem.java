@@ -3,7 +3,6 @@ package net.ohl.godblocks.item.custom;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -22,7 +21,7 @@ public class ModEffectSwordItem extends SwordItem {
     @Override
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
         if (entity instanceof LivingEntity livingEntity) {
-            livingEntity.addEffect(new MobEffectInstance(effect, 4, 0), player);
+            livingEntity.addEffect(new MobEffectInstance(effect, 12, 0), player);
         }
         return super.onLeftClickEntity(stack, player, entity);
     }

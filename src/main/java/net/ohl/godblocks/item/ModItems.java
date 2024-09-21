@@ -32,10 +32,10 @@ public class ModItems {
             () -> new CoconutItem(new Item.Properties()));
 
     public static final RegistryObject<Item> AMETHYST_STAFF = ITEMS.register("amethyst_staff",
-            () -> new AmethystStaffItem(new Item.Properties().durability(32)));
+            () -> new AmethystStaffItem(new Item.Properties().durability(16)));
 
     public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword",
-            () -> new ModEffectSwordItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.AMETHYST, 4, - 2.0F)), MobEffects.LEVITATION));
+            () -> new ModEffectSwordItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.AMETHYST, 4, - 2.0F)), MobEffects.MOVEMENT_SLOWDOWN));
     public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel",
             () -> new ShovelItem(ModToolTiers.AMETHYST, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.AMETHYST, 2F, - 2.5F))));
     public static final RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe",
