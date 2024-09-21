@@ -34,6 +34,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.AMETHYST_CHESTPLATE.get());
                         output.accept(ModItems.AMETHYST_LEGGINGS.get());
                         output.accept(ModItems.AMETHYST_BOOTS.get());
+
+                        output.accept(ModBlocks.AMETHYST_LAMP.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> FOOD_ITEMS_TAB = CREATIVE_MODE_TABS.register("food_items_tab",

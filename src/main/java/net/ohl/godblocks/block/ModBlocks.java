@@ -42,6 +42,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> GODBLOCK_T2 = registerBlock(GodBlockT2.name, GodBlockT2::new);
     public static final RegistryObject<Block> GODBLOCK_T3 = registerBlock(GodBlockT3.name, GodBlockT3::new);
 
+    public static final RegistryObject<Block> AMETHYST_LAMP = registerBlock("amethyst_lamp",
+            () -> new AmethystLampBlock(BlockBehaviour.Properties.of().strength(3f).lightLevel(state -> state.getValue(AmethystLampBlock.CLICKED) ? 15 : 0)
+            ));
+
+
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));
 
@@ -51,8 +56,8 @@ public class ModBlocks {
         return registeredBlock;
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {
